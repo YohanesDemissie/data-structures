@@ -2,6 +2,11 @@
 
 const Node = require('./node.js')
 
+// class Node { //either implement this or create node.js file
+//   constructor(val) { //value  being  the argument of mulitple instances
+//     this.head = null; //default
+//     this.val = val; //passing in the arg
+//   }
 class SLL {
   constructor() {
     this.head = null;
