@@ -1,16 +1,13 @@
-'use strict';
-
-const Node = require('./node.js')
-
-// class Node { //either implement this or create node.js file
-//   constructor(val) { //value  being  the argument of mulitple instances
-//     this.head = null; //default
-//     this.val = val; //passing in the arg
-//   }
+class Node { 
+  constructor(val) { //value  being  the argument of mulitple instances
+    this.val = val; //passing in the arg
+    this.next = null; //default
+  }
+}
 class SLL {
   constructor() {
     this.head = null;
-    //this.listLength = 0; //this keeps count of the lenght of the node list
+    this.listLength = 0; //this keeps count of the lenght of the node list
   }
   //inserts starting in first node
   insertHead(val) {
@@ -49,7 +46,7 @@ class SLL {
     for (var loc = 1; loc < rem; loc++) {
       if (loc === rem) {
         preNode.next = curNode.next;
-        this.listLength--;
+        //  this.listLength--;
         return this;
       }
       preNode = curNode;
@@ -68,24 +65,12 @@ class SLL {
     }
     return this;
   }
-} //this one closes class SLL
-
-let node = {
-  head: {
-    value: 3, next: {
-      value: 6, next: {
-        value: 9, next: {
-          value: 12, next: {
-            value: 25, next: {
-              next: null
-            }
-          }
-        }
-      }
-    }
-  }
 }
-// call back node.head;
 
-module.exports = SLL;
+let node = new SLL
+node.insertNode(1);
+node.insertNode(2);
+node.insertNode(3);
 
+console.log(node);
+console.log(node.head)
